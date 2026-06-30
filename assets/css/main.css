@@ -809,7 +809,7 @@ section,
     padding: 60px 0;
     display: flex;
     align-items: center;
-    background-image: url("../img/New Folder/bg.jpg");
+    background-image: url("./assets/img/hero-bg.jpg");
     background-size: center;
     background-position: center;
 }

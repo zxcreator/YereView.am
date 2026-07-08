@@ -113,24 +113,28 @@
     /**
      * Init swiper sliders
      */
-    function initSwiper() {
-        document.querySelectorAll(".init-swiper").forEach(function (swiperElement) {
-            new Swiper(swiperElement, {
-                loop: true,
-                speed: 600,
-                autoplay: {
-                    delay: 5000,
-                },
-                slidesPerView: 1,
-                pagination: {
-                    el: swiperElement.querySelector(".swiper-pagination"),
-                    clickable: true,
-                },
-            });
-        });
-    }
 
-    window.addEventListener("load", initSwiper);
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        initialSlide: 1,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        autoplay: {
+            delay: 3500,
+            pauseOnMouseEnter: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+
+
+    window.addEventListener("load", swiper);
 
     /**
      * Correct scrolling position upon page load for URLs containing hash links.
@@ -172,3 +176,5 @@
     window.addEventListener("load", navmenuScrollspy);
     document.addEventListener("scroll", navmenuScrollspy);
 })();
+
+// Gallery Swiper

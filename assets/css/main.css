@@ -1,23 +1,3 @@
-/**
-* Template Name: Yummy
-* Template URL: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/
-* Updated: Aug 07 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
-/*--------------------------------------------------------------
-# Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
---------------------------------------------------------------*/
-/* Fonts */
-
-/*Yereview
-Buttons - #416bda
-Black color - #041120
-Buttons hover - #041120
-white color - #041120
-*/
 * {
     outline: none;
 }
@@ -283,6 +263,7 @@ a:hover {
         order: 2;
         margin: 0 15px 0 0;
         padding: 6px 20px;
+        font-size: 13px;
     }
 
     .header .navmenu {
@@ -797,21 +778,116 @@ section,
 }
 .section-title p .description-title {
     color: #416bda;
+    font-size: 40px;
 }
 
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
+    position: relative;
     width: 100%;
     min-height: 60vh;
     position: relative;
     padding: 60px 0;
     display: flex;
     align-items: center;
-    background-image: url("../img/New folder/bg.jpg");
-    background-size: center;
-    background-position: center;
+    background-image: url("../img/New folder/bg.png");
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+@media (max-width: 430px) {
+    .BottomRightArrow {
+        width: 80px !important;
+    }
+    .TopLeftArrow {
+        width: 80px !important;
+    }
+    .BottomLeftArrow {
+        width: 80px !important;
+    }
+    .TopRightArrow {
+        width: 80px !important;
+    }
+}
+.BottomRightArrow {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    rotate: 90deg;
+    right: 0vh;
+    bottom: 0vh;
+    z-index: 0;
+}
+.TopLeftArrow {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    top: 0vh;
+    rotate: 270deg;
+    z-index: 0;
+}
+.BottomLeftArrow {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    bottom: 0vh;
+    left: 0vh;
+    z-index: 0;
+}
+.TopRightArrow {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    top: 0vh;
+    right: 0vh;
+    z-index: 0;
+    rotate: 180deg;
+}
+@media (max-width: 430px) {
+    .BottomRightArrow {
+        width: 60px;
+    }
+    .TopLeftArrow {
+        width: 60px;
+    }
+    .BottomLeftArrow {
+        width: 60px;
+    }
+    .TopRightArrow {
+        width: 60px;
+    }
+}
+@media (max-width: 1650px) {
+    .BottomRightArrow {
+        width: 150px;
+    }
+    .TopLeftArrow {
+        width: 150px;
+    }
+    .BottomLeftArrow {
+        width: 150px;
+    }
+    .TopRightArrow {
+        width: 150px;
+    }
+}
+@media (max-width: 1450px) {
+    .BottomRightArrow {
+        width: 120px;
+    }
+    .TopLeftArrow {
+        width: 120px;
+    }
+    .BottomLeftArrow {
+        width: 120px;
+    }
+    .TopRightArrow {
+        width: 120px;
+    }
 }
 
 .hero h1 {
@@ -1201,9 +1277,12 @@ section,
 .testimonials .testimonial-item .testimonial-content {
     border-left: 3px solid var(--accent-color);
     padding-left: 30px;
+    margin-bottom: 50px;
 }
 .testimonial-p {
-    font-size: 30px;
+    font-size: 25px;
+    text-align: center;
+    align-items: center;
 }
 .testimonials .testimonial-item .testimonial-img {
     border-radius: 50%;
@@ -1350,6 +1429,11 @@ section,
 /*--------------------------------------------------------------
 # Chefs Section
 --------------------------------------------------------------*/
+
+.chefs {
+    position: relative;
+    overflow: hidden;
+}
 .chefs .team-member {
     background-color: var(--surface-color);
     box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
@@ -1450,6 +1534,7 @@ section,
     min-height: 500px;
     background-size: cover;
     background-position: center;
+    border-radius: 5px;
 }
 
 .book-a-table .reservation-form-bg {
@@ -1471,6 +1556,7 @@ section,
 .book-a-table .php-email-form input[type="number"],
 .book-a-table .php-email-form input[type="date"],
 .book-a-table .php-email-form input[type="time"],
+.book-a-table .php-email-form select[type="text"],
 .book-a-table .php-email-form textarea {
     font-size: 14px;
     padding: 10px 15px;
@@ -1479,6 +1565,7 @@ section,
     color: var(--default-color);
     background-color: color-mix(in srgb, var(--background-color), transparent 20%);
     border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+    border-radius: 5px;
 }
 
 .book-a-table .php-email-form input[type="text"]:focus,
@@ -1486,6 +1573,7 @@ section,
 .book-a-table .php-email-form input[type="number"]:focus,
 .book-a-table .php-email-form input[type="date"]:focus,
 .book-a-table .php-email-form input[type="time"]:focus,
+.book-a-table .php-email-form select[type="text"]:focus,
 .book-a-table .php-email-form textarea:focus {
     border-color: var(--accent-color);
 }
@@ -1495,17 +1583,21 @@ section,
 .book-a-table .php-email-form input[type="number"]::placeholder,
 .book-a-table .php-email-form input[type="date"]::placeholder,
 .book-a-table .php-email-form input[type="time"]::placeholder,
+.book-a-table .php-email-form select[type="time"]::placeholder,
 .book-a-table .php-email-form textarea::placeholder {
     color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
-
+.form-select:focus {
+    outline: none;
+    box-shadow: none;
+}
 .book-a-table .php-email-form button[type="submit"] {
     color: var(--contrast-color);
     background: var(--accent-color);
     border: 0;
     padding: 14px 60px;
     transition: 0.4s;
-    border-radius: 4px;
+    border-radius: 50px;
 }
 
 .book-a-table .php-email-form button[type="submit"]:hover {
@@ -1663,3 +1755,36 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
+
+.GallerySwiper {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.GallerySwiper .swiper-slide {
+    text-align: center;
+    font-size: 25px;
+    background: #a3d6ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.swiper-button-next {
+    margin-right: 25px;
+}
+.swiper-button-prev {
+    margin-left: 25px !important;
+}

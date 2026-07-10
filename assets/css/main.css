@@ -799,7 +799,7 @@ section,
     overflow: hidden;
 }
 
-@media (max-width: 430px) {
+@media (max-width: 450px) {
     .BottomRightArrow {
         width: 60px !important;
     }

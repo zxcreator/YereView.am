@@ -801,16 +801,16 @@ section,
 
 @media (max-width: 430px) {
     .BottomRightArrow {
-        width: 80px !important;
+        width: 60px !important;
     }
     .TopLeftArrow {
-        width: 80px !important;
+        width: 60px !important;
     }
     .BottomLeftArrow {
-        width: 80px !important;
+        width: 60px !important;
     }
     .TopRightArrow {
-        width: 80px !important;
+        width: 60px !important;
     }
 }
 .BottomRightArrow {
@@ -1042,6 +1042,7 @@ section,
     color: var(--contrast-color);
     background: rgb(65 107 218);
     padding: 30px;
+    height: 100%;
 }
 
 .why-us .why-box h3 {

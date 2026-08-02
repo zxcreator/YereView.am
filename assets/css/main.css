@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 * {
     outline: none;
 }
@@ -770,12 +772,7 @@ section,
     font-weight: 500;
     color: white;
 }
-.step3 p {
-    margin: 10px 0 0 0;
-    font-size: 50px;
-    font-weight: 500;
-    color: rgb(0, 0, 0);
-}
+
 .ourLogo2 {
     max-width: 250px;
 }
@@ -855,6 +852,12 @@ section,
     }
     .why-us p {
         margin-bottom: 35px !important;
+    }
+    .step3 p {
+        font-size: 30px !important;
+    }
+    .logoImg {
+        max-width: 220px !important;
     }
 }
 .BottomRightArrow {
@@ -1152,7 +1155,7 @@ section,
     padding: 70px 30px;
     width: 100%;
     height: 100%;
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    border: 2px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .why-us .icon-box i {
@@ -1221,12 +1224,14 @@ section,
 }
 
 .stats .stats-item {
-    padding: 30px;
-    width: 100%;
+    padding: 20px 0px;
+    width: 100;
+    background-color: rgba(0, 63, 200, 0.1);
+    border-radius: 20px;
 }
 
 .stats .stats-item span {
-    font-size: 48px;
+    font-size: 55px;
     display: block;
     color: var(--default-color);
     font-weight: 700;
@@ -1680,6 +1685,20 @@ section,
     background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
+.book-a-table h2 {
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    color: #416bda;
+    display: inline-block;
+    text-transform: uppercase;
+}
+.book-a-table p {
+    color: #416bda;
+    font-size: 40px;
+}
 /*--------------------------------------------------------------
 # Gallery Section
 --------------------------------------------------------------*/
@@ -1849,7 +1868,7 @@ section,
     justify-content: center;
     align-items: center;
     color: #fff;
-    border-radius: 10px;
+    border-radius: 0.375rem;
 }
 
 .swiper-slide img {
@@ -1860,9 +1879,13 @@ section,
 }
 .swiper-button-next {
     margin-right: 25px;
+    width: 30px !important;
+    height: 30px !important;
 }
 .swiper-button-prev {
     margin-left: 25px !important;
+    width: 30px !important;
+    height: 30px !important;
 }
 .key-section {
     background-image: url("../img/New folder/bg.png");
@@ -1880,7 +1903,6 @@ Blured images start
 .image-card {
     position: relative;
     overflow: hidden;
-    border-radius: 7px;
     min-height: 500px;
     background: #222;
 }
@@ -1947,3 +1969,993 @@ Blured images start
 /*
 Blured images end  
 */
+
+/* =========================================================
+   STEPS SECTION
+   ========================================================= */
+
+.steps-section {
+    width: 100%;
+    background: #f2f2f2;
+    padding: 45px 0;
+    max-height: 1000px;
+    overflow: hidden;
+}
+.steps-section h2 {
+    font-size: 25px;
+    text-align: center;
+    color: #416bda;
+    margin: 20px 0;
+}
+.step3 p {
+    font-size: 42px;
+    font-weight: 500;
+    color: #416bda;
+    text-transform: uppercase;
+}
+
+/* =========================================================
+   MAIN CONTAINER
+
+   Соотношение сохраняем близким к оригиналу 626x626.
+   ========================================================= */
+
+.steps-timeline {
+    position: relative;
+
+    width: 100%;
+    max-width: 900px;
+
+    aspect-ratio: 1 / 1;
+
+    margin: 0 auto;
+
+    overflow: hidden;
+}
+
+/* =========================================================
+   SVG CONNECTING LINES
+   ========================================================= */
+
+.steps-lines {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+.steps-lines path {
+    fill: none;
+
+    stroke: #176bc5;
+
+    stroke-width: 1;
+
+    vector-effect: non-scaling-stroke;
+}
+
+/* =========================================================
+   GENERIC STEP
+   ========================================================= */
+
+.step {
+    position: absolute;
+
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+}
+
+/* =========================================================
+   STEP 1
+
+   Оригинал:
+   marker примерно x=60 / y=52
+   ========================================================= */
+
+.step-1 {
+    left: 8.5%;
+    top: 8.3%;
+
+    width: 53%;
+}
+
+/* =========================================================
+   STEP 2
+
+   Оригинал:
+   marker примерно x=457 / y=177
+   ========================================================= */
+
+.step-2 {
+    right: 8.1%;
+    top: 28.3%;
+
+    width: 52%;
+
+    justify-content: flex-end;
+}
+
+/* =========================================================
+   STEP 3
+
+   Оригинал:
+   marker примерно x=60 / y=299
+   ========================================================= */
+
+.step-3 {
+    left: 7.6%;
+    top: 48%;
+
+    width: 53%;
+}
+
+/* =========================================================
+   MARKER
+   ========================================================= */
+
+.step-marker {
+    position: relative;
+
+    width: 124px;
+    height: 135px;
+
+    flex: 0 0 124px;
+
+    z-index: 10;
+}
+
+/* =========================================================
+   HEXAGON / STEP SHAPE
+   ========================================================= */
+
+.step-marker-shape {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 124px;
+    height: 125px;
+
+    background: #176bc5;
+
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(50% 0%, 90% 20%, 100% 67%, 50% 100%, 0% 67%, 10% 20%);
+    border-radius: 100px !important;
+}
+
+/* =========================================================
+   STEP LABEL
+   ========================================================= */
+
+.step-label {
+    display: block;
+
+    margin-top: -8px;
+    margin-bottom: 4px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+    line-height: 1;
+
+    font-weight: 700;
+}
+
+/* =========================================================
+   NUMBER
+   ========================================================= */
+
+.step-number {
+    display: block;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 55px;
+    line-height: 0.95;
+
+    font-weight: 700;
+}
+
+/* =========================================================
+   SMALL LIGHT BLUE TRIANGLE
+   ========================================================= */
+
+.step-marker-shape::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 0;
+
+    transform: translateX(-50%);
+
+    width: 34px;
+    height: 25px;
+
+    background: #159cdd;
+
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+
+/* =========================================================
+   PLATFORM UNDER MARKER
+   ========================================================= */
+
+.step-platform {
+    position: absolute;
+
+    left: 50%;
+    top: 99px;
+
+    transform: translateX(-50%);
+
+    width: 135px;
+    height: 35px;
+
+    border-radius: 50%;
+
+    background: #149dde;
+
+    z-index: -1;
+
+    box-shadow:
+        inset 0 -7px 0 #0876c8,
+        inset 0 -13px 0 rgba(0, 92, 190, 0.25);
+}
+
+/* =========================================================
+   INNER PLATFORM
+   ========================================================= */
+
+.step-platform span:first-child {
+    position: absolute;
+
+    left: 50%;
+    top: 7px;
+
+    width: 90px;
+    height: 18px;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    background: #0875c8;
+}
+
+.step-platform span:last-child {
+    position: absolute;
+
+    left: 50%;
+    top: 10px;
+
+    width: 52px;
+    height: 13px;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    background: #176bc5;
+}
+
+/* =========================================================
+   TEXT
+   ========================================================= */
+
+.step-info {
+    position: relative;
+
+    z-index: 10;
+
+    width: 240px;
+}
+
+/* STEP 1 + STEP 3 */
+
+.step-1 .step-info,
+.step-3 .step-info {
+    margin-left: 16px;
+}
+
+/* STEP 2 */
+
+.step-2 .step-info {
+    margin-right: 16px;
+
+    text-align: right;
+}
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.step-info h3 {
+    margin: 0 0 5px;
+
+    color: #1265c4;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 28px;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+}
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.step-info p {
+    margin: 0;
+
+    color: #52677b;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 18px;
+
+    line-height: 1.4;
+
+    font-weight: 400;
+}
+
+/* =========================================================
+   DESKTOP SIZE ADJUSTMENT
+   ========================================================= */
+
+@media (min-width: 1200px) {
+    .steps-timeline {
+        max-width: 900px;
+    }
+
+    .step-marker,
+    .step-marker-shape {
+        width: 124px;
+    }
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+    .steps-section {
+        padding: 40px 15px;
+    }
+
+    .steps-timeline {
+        max-width: 720px;
+    }
+
+    .step-marker,
+    .step-marker-shape {
+        width: 105px;
+    }
+
+    .step-marker {
+        flex-basis: 105px;
+        height: 118px;
+    }
+
+    .step-number {
+        font-size: 48px;
+    }
+
+    .step-info {
+        width: 210px;
+    }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+    /* =========================================
+       SECTION
+       ========================================= */
+
+    .steps-section {
+        padding: 50px 20px;
+        overflow: hidden;
+    }
+
+    /* =========================================
+       TIMELINE
+       ========================================= */
+
+    .steps-timeline {
+        position: relative;
+
+        width: 100%;
+        max-width: 520px;
+
+        height: auto;
+
+        margin: 0 auto;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 65px;
+
+        overflow: visible;
+    }
+
+    /* =========================================
+       ONE CONTINUOUS VERTICAL LINE
+       ========================================= */
+
+    .steps-timeline::before {
+        content: "";
+
+        position: absolute;
+
+        left: 42.5px;
+
+        top: 92px;
+        bottom: 92px;
+
+        width: 1px;
+
+        background: #176bc5;
+
+        z-index: 1;
+
+        pointer-events: none;
+    }
+
+    /* =========================================
+       ALL STEPS
+       ========================================= */
+
+    .step,
+    .step-1,
+    .step-2,
+    .step-3 {
+        position: relative;
+
+        top: auto;
+        left: auto;
+        right: auto;
+
+        width: 100%;
+
+        min-height: 105px;
+
+        margin: 0;
+
+        padding: 0;
+
+        display: flex;
+
+        flex-direction: row !important;
+
+        align-items: center;
+
+        justify-content: flex-start !important;
+
+        text-align: left;
+
+        z-index: 5;
+    }
+
+    /* =========================================
+       FORCE MARKER TO LEFT
+       ========================================= */
+
+    .step-marker,
+    .step-1 .step-marker,
+    .step-2 .step-marker,
+    .step-3 .step-marker {
+        position: relative;
+
+        order: 1;
+
+        width: 85px;
+        height: 105px;
+
+        flex: 0 0 85px;
+
+        margin: 0;
+
+        z-index: 10;
+    }
+
+    /* =========================================
+       FORCE TEXT TO RIGHT
+       ========================================= */
+
+    .step-info,
+    .step-1 .step-info,
+    .step-2 .step-info,
+    .step-3 .step-info {
+        order: 2;
+
+        width: auto;
+
+        flex: 1;
+
+        margin-left: 20px !important;
+        margin-right: 0 !important;
+
+        text-align: left !important;
+
+        z-index: 20;
+    }
+
+    /* =========================================
+       HEXAGON
+       ========================================= */
+
+    .step-marker-shape {
+        position: absolute;
+
+        left: 0;
+        top: 0;
+
+        width: 85px;
+        height: 92px;
+
+        z-index: 10;
+    }
+
+    /* =========================================
+       NUMBER
+       ========================================= */
+
+    .step-number {
+        font-size: 38px;
+    }
+
+    /* =========================================
+       LABEL
+       ========================================= */
+
+    .step-label {
+        font-size: 10px;
+    }
+
+    /* =========================================
+       PLATFORM
+       ========================================= */
+
+    .step-platform {
+        position: absolute;
+
+        left: 50%;
+        top: 76px;
+
+        transform: translateX(-50%);
+
+        width: 105px;
+        height: 27px;
+
+        z-index: 5;
+    }
+
+    .step-platform span:first-child {
+        width: 70px;
+        height: 14px;
+    }
+
+    .step-platform span:last-child {
+        width: 40px;
+        height: 9px;
+    }
+
+    /* =========================================
+       TEXT TITLE
+       ========================================= */
+
+    .step-info h3 {
+        margin: 0 0 6px;
+
+        font-size: 20px;
+
+        line-height: 1.2;
+    }
+
+    /* =========================================
+       TEXT DESCRIPTION
+       ========================================= */
+
+    .step-info p {
+        margin: 0;
+
+        font-size: 15px;
+
+        line-height: 1.4;
+    }
+
+    /* =========================================
+       HIDE DESKTOP SVG
+       ========================================= */
+
+    .steps-lines {
+        display: none;
+    }
+}
+/*
+Testemonial carusel 
+*/
+
+/* =========================================================
+   TESTIMONIAL SECTION
+   ========================================================= */
+.testimonial h2 {
+    font-size: 42px;
+    font-weight: 500;
+    color: #416bda;
+    text-transform: uppercase;
+}
+
+.testimonial .carousel {
+    position: relative;
+
+    padding: 0 60px 60px;
+}
+
+/* =========================================================
+   CAROUSEL
+   ========================================================= */
+
+.testimonial .carousel-inner {
+    overflow: hidden;
+}
+
+/* =========================================================
+   DESKTOP SLIDE
+   ========================================================= */
+
+.testimonial .carousel-item {
+    transition: transform 0.6s ease-in-out;
+}
+
+/* =========================================================
+   CARD WRAPPER
+   ========================================================= */
+
+.testimonial-card-wrapper {
+    width: 100%;
+
+    height: 100%;
+}
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.testimonial-card {
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 360px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+
+    overflow: hidden;
+}
+
+/* =========================================================
+   CARD BODY
+   ========================================================= */
+
+.testimonial-card .card-body {
+    height: 100%;
+
+    min-height: 360px;
+
+    padding: 30px 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-start;
+}
+
+/* =========================================================
+   AVATAR
+   ========================================================= */
+
+.testimonial-avatar {
+    width: 80px;
+
+    height: 80px;
+
+    object-fit: cover;
+
+    flex-shrink: 0;
+}
+
+/* =========================================================
+   NAME
+   ========================================================= */
+
+.testimonial-card .card-title {
+    margin-bottom: 6px;
+
+    flex-shrink: 0;
+}
+
+/* =========================================================
+   POSITION
+   ========================================================= */
+
+.testimonial-position {
+    margin-bottom: 15px;
+
+    min-height: 24px;
+
+    flex-shrink: 0;
+}
+
+/* =========================================================
+   REVIEW TEXT
+   ========================================================= */
+
+.testimonial-text {
+    margin-bottom: 20px;
+
+    line-height: 1.6;
+
+    flex-grow: 1;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: center;
+}
+
+/* =========================================================
+   RATING
+   ========================================================= */
+
+.testimonial-rating {
+    margin-top: auto;
+
+    flex-shrink: 0;
+}
+
+/* =========================================================
+   CONTROLS
+   ========================================================= */
+
+.testimonial .carousel-control-prev,
+.testimonial .carousel-control-next {
+    width: 45px;
+
+    height: 45px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background-color: #176bc5;
+
+    border-radius: 50%;
+
+    opacity: 1;
+
+    z-index: 10;
+}
+
+.testimonial .carousel-control-prev {
+    left: 0;
+}
+
+.testimonial .carousel-control-next {
+    right: 0;
+}
+
+/* =========================================================
+   INDICATORS
+   ========================================================= */
+
+.testimonial .carousel-indicators {
+    position: absolute;
+
+    bottom: 0;
+
+    margin: 0;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+.testimonial .carousel-indicators button {
+    width: 10px;
+
+    height: 10px;
+
+    margin: 0 5px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background-color: #176bc5;
+
+    opacity: 0.3;
+}
+
+.testimonial .carousel-indicators button.active {
+    opacity: 1;
+}
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
+
+@media (min-width: 768px) {
+    .testimonial .carousel-item .row {
+        min-height: 380px;
+
+        align-items: stretch;
+    }
+
+    .testimonial .carousel-item .col-md-4 {
+        display: flex;
+    }
+
+    .testimonial-card {
+        min-height: 360px;
+    }
+
+    .testimonial-card .card-body {
+        min-height: 360px;
+    }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+    .testimonial .carousel {
+        padding: 0 40px 60px;
+    }
+
+    /*
+     * Фиксированная высота всех мобильных
+     * отзывов.
+     */
+
+    .testimonial .carousel-item {
+        height: 390px;
+    }
+
+    .testimonial-card-wrapper {
+        width: 100%;
+
+        height: 100%;
+
+        padding: 0;
+    }
+
+    .testimonial-card {
+        width: 100%;
+
+        height: 390px;
+
+        min-height: 390px;
+    }
+
+    .testimonial-card .card-body {
+        height: 390px;
+
+        min-height: 390px;
+
+        padding: 30px 20px;
+    }
+
+    .testimonial-avatar {
+        width: 75px;
+
+        height: 75px;
+    }
+
+    .testimonial-card .card-title {
+        font-size: 18px;
+    }
+
+    .testimonial-position {
+        font-size: 14px;
+
+        min-height: 22px;
+    }
+
+    .testimonial-text {
+        font-size: 14px;
+
+        line-height: 1.6;
+
+        overflow: hidden;
+
+        display: -webkit-box;
+
+        -webkit-line-clamp: 7;
+
+        -webkit-box-orient: vertical;
+    }
+
+    .testimonial .carousel-control-prev,
+    .testimonial .carousel-control-next {
+        width: 35px;
+
+        height: 35px;
+    }
+
+    .testimonial .carousel-control-prev {
+        left: 0;
+    }
+
+    .testimonial .carousel-control-next {
+        right: 0;
+    }
+}
+
+/* Partners Start  */
+
+.speedyui-partner {
+    --su-black-color: #000000;
+    --su-rubik-font: "Rubik", sans-serif;
+    font-family: var(--su-rubik-font);
+}
+.speedyui h3 {
+    color: #416bda;
+    font-size: 40px;
+}
+.speedyui-partner h3 {
+    font-weight: 500;
+}
+/* .speedyui-partner .swiper-slide {
+    height: 95px;
+} */
+.speedyui-partner .swiper-button-next,
+.speedyui-partner .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+}
+.speedyui-partner .swiper-button-next::after,
+.speedyui-partner .swiper-button-prev::after {
+    font-size: 12px;
+    color: var(--su-black-color);
+}
+/* .speedyui-partner .swiper-button-next {
+    right: 0;
+}
+.speedyui-partner .swiper-button-prev {
+    left: 0;
+}  */
+
+/* Partners End */

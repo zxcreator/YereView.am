@@ -133,7 +133,6 @@
         },
     });
 
-
     window.addEventListener("load", swiper);
 
     /**
@@ -178,3 +177,331 @@
 })();
 
 // Gallery Swiper
+
+// testemonial swiper
+const testimonials = [
+    {
+        name: "John Doe",
+        position: "CEO, Company Inc.",
+        image: "https://randomuser.me/api/portraits/men/3.jpg",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam.",
+        rating: 4.5,
+    },
+
+    {
+        name: "Jane Smith",
+        position: "Marketing Director, Agency XYZ",
+        image: "https://randomuser.me/api/portraits/women/43.jpg",
+        text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+        rating: 5,
+    },
+
+    {
+        name: "Jane Smith",
+        position: "Marketing Director, Agency XYZ",
+        image: "https://randomuser.me/api/portraits/women/44.jpg",
+        text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+        rating: 5,
+    },
+
+    {
+        name: "Jane Smith",
+        position: "Marketing Director, Agency XYZ",
+        image: "https://randomuser.me/api/portraits/women/45.jpg",
+        text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+        rating: 5,
+    },
+
+    {
+        name: "Jane Smith",
+        position: "Marketing Director, Agency XYZ",
+        image: "https://randomuser.me/api/portraits/women/46.jpg",
+        text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+        rating: 5,
+    },
+
+    {
+        name: "Mike Johnson",
+        position: "Freelance Designer",
+        image: "https://randomuser.me/api/portraits/men/43.jpg",
+        text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.",
+        rating: 4,
+    },
+];
+document.addEventListener("DOMContentLoaded", function () {
+    const carouselElement = document.getElementById("testimonialCarousel");
+
+    const carouselInner = carouselElement.querySelector(".carousel-inner");
+
+    const indicators = carouselElement.querySelector(".carousel-indicators");
+
+    let currentMode = null;
+
+    /* =====================================================
+       CREATE STARS
+    ===================================================== */
+
+    function createStars(rating) {
+        let stars = "";
+
+        for (let i = 1; i <= 5; i++) {
+            if (rating >= i) {
+                stars += `
+                    <i class="bi bi-star-fill"></i>
+                `;
+            } else if (rating >= i - 0.5) {
+                stars += `
+                    <i class="bi bi-star-half"></i>
+                `;
+            } else {
+                stars += `
+                    <i class="bi bi-star"></i>
+                `;
+            }
+        }
+
+        return stars;
+    }
+
+    /* =====================================================
+       CREATE CARD
+    ===================================================== */
+
+    function createCard(testimonial) {
+        const wrapper = document.createElement("div");
+
+        wrapper.className = "testimonial-card-wrapper";
+
+        wrapper.innerHTML = `
+
+            <div class="card testimonial-card">
+
+                <div class="card-body text-center">
+
+                    <img
+                        src="${testimonial.image}"
+                        class="rounded-circle testimonial-avatar mb-3"
+                        alt="${testimonial.name}"
+                    >
+
+                    <h5 class="card-title">
+                        ${testimonial.name}
+                    </h5>
+
+                    <p class="card-text text-muted testimonial-position">
+                        ${testimonial.position}
+                    </p>
+
+                    <p class="card-text testimonial-text">
+                        "${testimonial.text}"
+                    </p>
+
+                    <div class="text-warning testimonial-rating">
+                        ${createStars(testimonial.rating)}
+                    </div>
+
+                </div>
+
+            </div>
+
+        `;
+
+        return wrapper;
+    }
+
+    /* =====================================================
+       BUILD CAROUSEL
+    ===================================================== */
+
+    function buildCarousel() {
+        const isMobile = window.innerWidth < 768;
+
+        const newMode = isMobile ? "mobile" : "desktop";
+
+        /*
+         * Если режим не изменился,
+         * ничего не перестраиваем.
+         */
+
+        if (currentMode === newMode) {
+            return;
+        }
+
+        currentMode = newMode;
+
+        /* =================================================
+           REMOVE OLD BOOTSTRAP CAROUSEL INSTANCE
+        ================================================= */
+
+        const oldCarousel = bootstrap.Carousel.getInstance(carouselElement);
+
+        if (oldCarousel) {
+            oldCarousel.dispose();
+        }
+
+        /* =================================================
+           CLEAR
+        ================================================= */
+
+        carouselInner.innerHTML = "";
+        indicators.innerHTML = "";
+
+        /* =================================================
+           MOBILE
+           1 CARD PER SLIDE
+        ================================================= */
+
+        if (isMobile) {
+            testimonials.forEach((testimonial, index) => {
+                const slide = document.createElement("div");
+
+                slide.className = "carousel-item" + (index === 0 ? " active" : "");
+
+                const card = createCard(testimonial);
+
+                slide.appendChild(card);
+
+                carouselInner.appendChild(slide);
+
+                /* INDICATOR */
+
+                const indicator = document.createElement("button");
+
+                indicator.type = "button";
+
+                indicator.dataset.bsTarget = "#testimonialCarousel";
+
+                indicator.dataset.bsSlideTo = index;
+
+                indicator.setAttribute("aria-label", `Slide ${index + 1}`);
+
+                if (index === 0) {
+                    indicator.classList.add("active");
+
+                    indicator.setAttribute("aria-current", "true");
+                }
+
+                indicators.appendChild(indicator);
+            });
+        } else {
+            /* =================================================
+           DESKTOP
+           3 CARDS PER SLIDE
+        ================================================= */
+            for (let i = 0; i < testimonials.length; i += 3) {
+                const slide = document.createElement("div");
+
+                slide.className = "carousel-item" + (i === 0 ? " active" : "");
+
+                const row = document.createElement("div");
+
+                row.className = "row g-4 align-items-stretch";
+
+                const currentTestimonials = testimonials.slice(i, i + 3);
+
+                currentTestimonials.forEach((testimonial) => {
+                    const column = document.createElement("div");
+
+                    column.className = "col-md-4 d-flex";
+
+                    const card = createCard(testimonial);
+
+                    column.appendChild(card);
+
+                    row.appendChild(column);
+                });
+
+                slide.appendChild(row);
+
+                carouselInner.appendChild(slide);
+
+                /* INDICATOR */
+
+                const slideNumber = i / 3;
+
+                const indicator = document.createElement("button");
+
+                indicator.type = "button";
+
+                indicator.dataset.bsTarget = "#testimonialCarousel";
+
+                indicator.dataset.bsSlideTo = slideNumber;
+
+                indicator.setAttribute("aria-label", `Slide ${slideNumber + 1}`);
+
+                if (slideNumber === 0) {
+                    indicator.classList.add("active");
+
+                    indicator.setAttribute("aria-current", "true");
+                }
+
+                indicators.appendChild(indicator);
+            }
+        }
+
+        /* =================================================
+           INITIALIZE BOOTSTRAP CAROUSEL
+        ================================================= */
+
+        new bootstrap.Carousel(carouselElement, {
+            interval: false,
+            ride: false,
+            touch: true,
+            wrap: true,
+        });
+    }
+
+    /* =====================================================
+       INITIAL BUILD
+    ===================================================== */
+
+    buildCarousel();
+
+    /* =====================================================
+       RESPONSIVE REBUILD
+    ===================================================== */
+
+    let resizeTimer;
+
+    window.addEventListener("resize", function () {
+        clearTimeout(resizeTimer);
+
+        resizeTimer = setTimeout(function () {
+            buildCarousel();
+        }, 150);
+    });
+});
+// Partsner Start
+
+var partnerSwiper = new Swiper(".partnerswiper", {
+    slidesPerView: 2,
+    // navigation: { // nextEl: ".swiper-button-next", // prevEl: ".swiper-button-prev", // },
+
+    spaceBetween: 20,
+
+    speed: 5000,
+
+    loop: true,
+
+    autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: false,
+    },
+
+    breakpoints: {
+        576: {
+            slidesPerView: 3,
+        },
+
+        900: {
+            slidesPerView: 4,
+        },
+
+        1100: {
+            slidesPerView: 6,
+        },
+    },
+});
+
+// Partners End

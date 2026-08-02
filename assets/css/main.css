@@ -1212,7 +1212,7 @@ section,
 
 .stats:before {
     content: "";
-    background: color-mix(in srgb, rgb(4 17 32), transparent 35%);
+    background: color-mix(in srgb, rgb(4 17 32), transparent 45%);
     position: absolute;
     inset: 0;
     z-index: 2;

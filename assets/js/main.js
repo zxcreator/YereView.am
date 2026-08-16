@@ -181,51 +181,51 @@
 // testemonial swiper
 const testimonials = [
     {
-        name: "John Doe",
-        position: "CEO, Company Inc.",
-        image: "https://randomuser.me/api/portraits/men/3.jpg",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam.",
-        rating: 4.5,
-    },
-
-    {
-        name: "Jane Smith",
-        position: "Marketing Director, Agency XYZ",
-        image: "https://randomuser.me/api/portraits/women/43.jpg",
-        text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+        name: "PURE",
+        position: "Առողջ ապրելակերպ",
+        image: "assets/img/partners/pure.jpg",
+        text: "Մեզ համար կարևոր էր, որ մեր ապրանքը ներկայացվի ճիշտ լսարանին։ Տաքսիներում տեղադրված գովազդը օգնեց մեզ ավելի տեսանելի դառնալ և հասնել նոր հաճախորդների։",
         rating: 5,
     },
 
     {
-        name: "Jane Smith",
-        position: "Marketing Director, Agency XYZ",
-        image: "https://randomuser.me/api/portraits/women/44.jpg",
-        text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+        name: "Tonoyans Construction",
+        position: "Շինարարական ընկերություն",
+        image: "assets/img/partners/tonoyans.png",
+        text: "Տաքսիներում գովազդի միջոցով մեր ընկերության մասին տեղեկությունը հասանելի դարձավ ավելի լայն լսարանի։ Համագործակցությունից գոհ ենք և գնահատում ենք պրոֆեսիոնալ մոտեցումը։",
         rating: 5,
     },
 
     {
-        name: "Jane Smith",
-        position: "Marketing Director, Agency XYZ",
-        image: "https://randomuser.me/api/portraits/women/45.jpg",
-        text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+        name: "Alma",
+        position: "Հագուստ",
+        image: "assets/img/partners/alma.jpg",
+        text: "Գովազդը տաքսիներում մեզ համար դարձավ նոր և արդյունավետ միջոց հաճախորդների ուշադրությունը գրավելու համար։ Հատկապես գնահատում ենք գովազդի տեսանելիությունն ու լայն հասանելիությունը:",
         rating: 5,
     },
 
     {
-        name: "Jane Smith",
-        position: "Marketing Director, Agency XYZ",
-        image: "https://randomuser.me/api/portraits/women/46.jpg",
-        text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+        name: "Aleksandr Valdi",
+        position: "Էկզոտիկ Հագուստ",
+        image: "assets/img/partners/aleksandr-valdi.jpg",
+        text: "Մեր արտադրանքը պահանջում է ճիշտ ներկայացում և տեսանելիություն։ Տաքսիների գովազդային հարթակը մեզ օգնեց ներկայանալ նոր լսարանի և բարձրացնել բրենդի ճանաչելիությունը:",
         rating: 5,
     },
 
     {
-        name: "Mike Johnson",
-        position: "Freelance Designer",
-        image: "https://randomuser.me/api/portraits/men/43.jpg",
-        text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.",
+        name: "Best Plit",
+        position: "Բնական քարից Սալիկներ",
+        image: "assets/img/partners/bestplit.jpg",
+        text: "Գովազդը մեզ հնարավորություն տվեց ներկայացնել մեր բնական քարից պատրաստված արտադրանքը լայն լսարանի։ Համագործակցությունը մեզ համար դարձավ նոր հաճախորդների հետ կապ հաստատելու արդյունավետ միջոց:",
         rating: 4,
+    },
+
+    {
+        name: "Noyan",
+        position: "Ըմպելիքներ",
+        image: "assets/img/partners/noyan.jpg",
+        text: "Տաքսիներում գովազդը մեզ հնարավորություն տվեց ներկայացնել մեր ըմպելիքները նոր գործընկերների։ Համագործակցությունը մեզ համար դարձավ նոր գործընկերների հետ կապ հաստատելու արդյունավետ միջոց:",
+        rating: 5,
     },
 ];
 document.addEventListener("DOMContentLoaded", function () {
@@ -474,7 +474,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Partsner Start
 
 var partnerSwiper = new Swiper(".partnerswiper", {
-    slidesPerView: 2,
+    slidesPerView: 1,
     // navigation: { // nextEl: ".swiper-button-next", // prevEl: ".swiper-button-prev", // },
 
     spaceBetween: 20,
@@ -491,15 +491,15 @@ var partnerSwiper = new Swiper(".partnerswiper", {
 
     breakpoints: {
         576: {
-            slidesPerView: 3,
+            slidesPerView: 5,
         },
 
         900: {
-            slidesPerView: 4,
+            slidesPerView: 5,
         },
 
         1100: {
-            slidesPerView: 6,
+            slidesPerView: 5,
         },
     },
 });

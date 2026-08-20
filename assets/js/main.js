@@ -220,13 +220,13 @@ const testimonials = [
         rating: 4,
     },
 
-    {
-        name: "Noyan",
-        position: "Ըմպելիքներ",
-        image: "assets/img/partners/noyan.jpg",
-        text: "Տաքսիներում գովազդը մեզ հնարավորություն տվեց ներկայացնել մեր ըմպելիքները նոր գործընկերների։ Համագործակցությունը մեզ համար դարձավ նոր գործընկերների հետ կապ հաստատելու արդյունավետ միջոց:",
-        rating: 5,
-    },
+    // {
+    //     name: "Noyan",
+    //     position: "Ըմպելիքներ",
+    //     image: "assets/img/partners/noyan.jpg",
+    //     text: "Տաքսիներում գովազդը մեզ հնարավորություն տվեց ներկայացնել մեր ըմպելիքները նոր գործընկերների։ Համագործակցությունը մեզ համար դարձավ նոր գործընկերների հետ կապ հաստատելու արդյունավետ միջոց:",
+    //     rating: 5,
+    // },
 ];
 document.addEventListener("DOMContentLoaded", function () {
     const carouselElement = document.getElementById("testimonialCarousel");
